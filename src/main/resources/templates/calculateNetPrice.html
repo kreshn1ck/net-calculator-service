@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculate Net Price</title>
+</head>
+<body>
+<h1>Calculate Net Price</h1>
+<form action="#" th:action="@{/calculateNetPrice}" th:object="${netPriceForm}" method="post">
+    <div>
+        <label for="grossPrice">Gross Price:</label>
+        <input type="text" id="grossPrice" th:field="*{grossPrice}" />
+    </div>
+    <div style="padding: 8px 0">
+        <label for="countryIso">Country ISO:</label>
+        <input type="text" id="countryIso" th:field="*{countryIso}" />
+    </div>
+    <button type="submit">Calculate</button>
+</form>
+<div style="padding: 8px 0">
+    <div th:if="${netPrice != null}" th:text="'Result:' + ${netPrice}"></div>
+    <div th:if="${errorMessage != null}" th:text="${errorMessage}" style="color: red;"></div>
+</div>
+</body>
+</html>

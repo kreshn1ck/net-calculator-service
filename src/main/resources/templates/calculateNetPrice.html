@@ -18,7 +18,7 @@
     <button type="submit">Calculate</button>
 </form>
 <div style="padding: 8px 0">
-    <div th:if="${netPrice != null}" th:text="'Result:' + ${netPrice}"></div>
+    <div th:if="${netPrice != null}" th:text="'Net Price: ' + ${netPrice}"></div>
     <div th:if="${errorMessage != null}" th:text="${errorMessage}" style="color: red;"></div>
 </div>
 </body>

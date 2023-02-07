@@ -41,6 +41,6 @@ public class NetCalculatorServiceTest {
         BigDecimal grossPrice = new BigDecimal("100");
         Exception exception = assertThrows(IllegalArgumentException.class, () ->
                 netCalculatorService.calculateNetPrice(grossPrice, "NON-EXISTING"));
-        assertEquals("Unknown country ISO: NON-EXISTING", exception.getMessage());
+        assertEquals("Unknown Country ISO: NON-EXISTING", exception.getMessage());
     }
 }
